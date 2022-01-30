@@ -1,0 +1,12 @@
+import smtplib
+
+from_mail = "xyz@gmail.com"
+to_mail= "abc@gmail.com"
+
+msg_body =  "I Am python!!!"
+
+server = smtplib.SMTP('smtp.gmail.com',587)
+server.starttls()
+server.login(from_mail,"asdf")
+server.sendmail(from_mail,to_mail,msg_body)
+server.quit()
